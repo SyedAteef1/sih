@@ -77,7 +77,7 @@ def app():
                 st.text('Name '+st.session_state.username)
                 st.text('Email id: '+st.session_state.useremail)
                 st.button('Sign out', on_click=t) 
-           
+            
                 
     
 

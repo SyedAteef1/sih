@@ -3,7 +3,7 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 
 
-import querypro, trending, test, your, about,home
+import home, trending, test, your, about
 st.set_page_config(
         page_title="Poly Pulley Failure",
 )
@@ -27,8 +27,8 @@ class MultiApp:
         with st.sidebar:        
             app = option_menu(
                 menu_title='Poly Pulley Failure ',
-                options=['Home','querypro','Trending','Your Posts','about','Account'],
-                icons=['house-fill','trophy-fill','chat-fill','info-circle-fill','house-fill','person-circle'],
+                options=['Home','Account','Trending','Your Posts','about'],
+                icons=['house-fill','person-circle','trophy-fill','chat-fill','info-circle-fill'],
                 menu_icon='chat-text-fill',
                 default_index=1,
                 styles={
@@ -39,21 +39,17 @@ class MultiApp:
                 
                 )
 
-        if app == "Account":
-            test.app()  
         
         if app == "Home":
             home.app()
-        if app == 'querypro':
-            querypro.app() 
-            
+        if app == "Account":
+            test.app()    
         if app == "Trending":
             trending.app()        
         if app == 'Your Posts':
             your.app()
         if app == 'about':
-            about.app() 
-        
+            about.app()    
              
           
              
