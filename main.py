@@ -24,11 +24,12 @@ class MultiApp:
 
     def run():
         # app = st.sidebar(
+        st.sidebar.image("data/SIH.png", caption="Online Analytics")
         with st.sidebar:        
             app = option_menu(
                 menu_title='Poly Pulley Failure ',
-                options=['Home','Account','Trending','Your Posts','about'],
-                icons=['house-fill','person-circle','trophy-fill','chat-fill','info-circle-fill'],
+                options=['Home','Account','Trending','Your Posts','about','temp'],
+                icons=['house-fill','person-circle','trophy-fill','chat-fill','info-circle-fill','info-circle-fill'],
                 menu_icon='chat-text-fill',
                 default_index=1,
                 styles={
@@ -49,7 +50,9 @@ class MultiApp:
         if app == 'Your Posts':
             your.app()
         if app == 'about':
-            about.app()    
+            about.app() 
+        if app == 'temp':
+            temp.app()
              
           
              
