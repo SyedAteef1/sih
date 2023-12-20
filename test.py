@@ -9,7 +9,7 @@ cred = credentials.Certificate("sih2023-663fa-firebase-adminsdk-l8ee2-f4e7ff97e9
 firebase_admin.initialize_app(cred)
 def app():
 # Usernm = []
-    st.title('Welcome to :violet[SIH2023] :sunglasses:')
+    st.title('Welcome to :violet[SIH2023] ')
 
     if 'username' not in st.session_state:
         st.session_state.username = ''
@@ -60,7 +60,7 @@ def app():
 
         
         if choice == 'Sign up':
-            username = st.text_input("Enter  your unique username")
+            username = st.text_input("Enter  your employee  ID")
             
             if st.button('Create my account'):
                 user = auth.create_user(email = email, password = password,uid=username)
@@ -84,3 +84,6 @@ def app():
                             
     def ap():
         st.write('Posts')
+
+
+
